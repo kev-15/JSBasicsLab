@@ -4,6 +4,7 @@
     var JS_BASICS={};
 
     JS_BASICS.isNumberEven = function(i) {
+	//a faire
         // i will be an integer.
         // Return true if it's even, and false if it isn't.
     };
