@@ -19,7 +19,7 @@
         // Return the file extension (with no period) if it has one, otherwise false
         var extension;
         var pos = str.lastIndexOf('.');
-        var extension = a.substr(pos); // sous_chaine
+        var extension = str.substr(pos); // sous_chaine
         return extension;
 
     };
