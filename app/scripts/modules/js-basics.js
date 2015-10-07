@@ -7,6 +7,11 @@
 	//a faire
         // i will be an integer.
         // Return true if it's even, and false if it isn't.
+        if(i % 2 == 0)
+        {
+          return true;
+        }
+        else {return false ; }
     };
 
     JS_BASICS.getFileExtension = function(str) {
