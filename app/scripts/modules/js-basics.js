@@ -74,7 +74,7 @@
         for (var i = 0; i < arr.length; i++) {
           if(Array.isArray(arr[i]))
             res  += JS_BASICS.nestedSum(arr[i]);
-          if(Number.isInteger(arr[i]))
+          if(typeof arr[i] === "number")
             res = res + arr[i];
         }
 
