@@ -49,16 +49,36 @@
     JS_BASICS.reverseString = function(str) {
         // str will be an string
         // Return a new string who's characters are in the opposite order to str's.
+        return str.split("").reverse().join("");
     };
 
     JS_BASICS.isPalindrome = function(str) {
         // str will be an string
         // Return true if it is a palindrome and false otherwise. It should be case insensitive and not consider space or punctuation.
+        str = str.toUpperCase();
+        str = str.replace(/ /g,"");
+        var len = str.length;
+        for ( var i = 0; i < Math.floor(len/2); i++ ) {
+            if (str[i] !== str[len - 1 - i]) {
+                return false;
+            }
+        }
+        return true;
+
     };
 
     JS_BASICS.nestedSum = function(arr) {
         // arr will be an array, containing integers, strings and/or arrays like itself
         // Return the sum all the numbers you find, anywhere in the nest of arrays.
+        var res = 0;
+        for (var i = 0; i < arr.length; i++) {
+          if(Array.isArray(arr[i]))
+            res  += JS_BASICS.nestedSum(arr[i]);
+          if(Number.isInteger(arr[i]))
+            res = res + arr[i];
+        }
+
+        return res;
     };
 
     global.JS_BASICS = JS_BASICS;
